@@ -1,0 +1,29 @@
+{
+  "name": "myxx-api",
+  "version": "1.0.0",
+  "description": "The api endpoint for myxx",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/znewton/myxx-api.git"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "api",
+    "youtube"
+  ],
+  "author": "znewton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/znewton/myxx-api/issues"
+  },
+  "homepage": "https://github.com/znewton/myxx-api#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "path": "^0.12.7"
+  }
+}
