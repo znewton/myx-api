@@ -4,7 +4,8 @@
   "description": "The api endpoint for myxx",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,11 @@
   },
   "homepage": "https://github.com/znewton/myxx-api#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
