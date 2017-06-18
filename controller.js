@@ -32,7 +32,6 @@ exports.get_channels_by_search = function (request, response) {
       response.json(parsedData.items)
     });
   });
-
   req.on('error', (e) => {
     console.error(e);
   });
