@@ -1,6 +1,6 @@
 const https = require('https');
 const querystring = require('query-string');
-const API_KEY = 'AIzaSyBB0cENZdGYDoSn1H0cRmwJ-KsjdIMaWAA';
+const API_KEY = process.env.YOUTUBE_API_KEY;
 
 /// Searches YouTube for a list of channels matching
 /// a search term.
