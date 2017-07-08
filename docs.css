@@ -1,0 +1,44 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+}
+label {
+  font-weight: 600;
+}
+main {
+  width: 60em;
+  margin-bottom: 5em;
+}
+@media (max-width: 60em) {
+  main {
+    width: 40em;
+  }
+}
+@media (max-width: 40em) {
+  main {
+    width: 20em;
+  }
+}
+
+code {
+  display: block;
+  white-space: pre;
+  background-color: #eee;
+  border-left: 2px solid #dedede;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+code .key {
+  color: #e06b75;
+}
+code .string {
+  color: #1da1f2;
+}
+code .boolean, code .null {
+  color: #c677dd;
+}

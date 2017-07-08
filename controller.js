@@ -126,15 +126,15 @@ exports.get_mix = async function (request, response) {
         });
         res.on('end', () => {
           const parsedData = JSON.parse(data);
-          resolve(parsedData.items)
+          resolve(parsedData.items);
         });
       });
       req.on('error', (e) => {
-        reject(e.message)
+        reject(e.message);
       });
       req.end();
     }).then(videos => {
-      console.log('Got ' + videos.length + ' videos for ' + playlistId)
+      console.log('Got ' + videos.length + ' videos for ' + playlistId);
       for (let i = 0; i < videos.length; i++) {
         playlistVideos[videos[i].id] = videos[i].snippet;
         playlistVideoIds.push(videos[i].id)
