@@ -87,6 +87,64 @@ function getPlaylistsDocs() {
 function getMixDocs() {
   var paramsElement = document.getElementById('get_mix_params');
   var resultsElement = document.getElementById('get_mix_results');
+  paramsElement.innerHTML = syntaxHighlight({
+    playlists: [
+      'sjjkhfksjhfglsfsljdfj',
+      'aliuhakjfhsdkjfghskhj',
+      'sijhskjfghksldfhkjshd',
+      '...'
+    ]
+  });
+  resultsElement.innerHTML = syntaxHighlight({
+    orderedVideoIds: [
+      'kjhsl;kjhfg;ljksdfgljsj',
+      'slidfghjlsdjfghlsjhdfgk',
+      'lihrgpoweihsdjflkjsdfgj',
+      '...'
+    ],
+    "videoMap": {
+      sjjkhfksjhfglsfsljdfj: {
+        publishedAt: "yyyy-mm-ddThh:mm:ss.000Z",
+        channelId: "suhffnsdlkjbnsljbsuhsi",
+        thumbnails: {
+          default: {
+            url: "https://i.ytimg.com/vi/urlof/default.jpg",
+            width: 120,
+            height: 90
+          },
+          medium: {
+            url: "https://i.ytimg.com/vi/urlof/medium.jpg",
+            width: 320,
+            height: 180
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/urlof/high.jpg",
+            width: 480,
+            height: 360
+          },
+          standard: {
+            url: "https://i.ytimg.com/vi/urlof/standard.jpg",
+            width: 640,
+            height: 480
+          },
+          maxres: {
+            url: "https://i.ytimg.com/vi/urlof/maxres.jpg",
+            width: 1280,
+            height: 720
+          }
+        },
+        channelTitle: 'Channel Title',
+        playlistId: 'ailuhojahljfhsldjf',
+        position: 0,
+        resourceId: {
+          kind: "youtube#video",
+          videoId: "lskjdfg"
+        }
+      },
+      aliuhakjfhsdkjfghskhj: {},
+      sijhskjfghksldfhkjshd: {}
+    }
+  })
 }
 
 function syntaxHighlight(json) {

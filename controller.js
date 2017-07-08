@@ -145,7 +145,7 @@ exports.get_mix = async function (request, response) {
   console.log('Responding');
   playlistVideoIds = _shuffle(playlistVideoIds)
   response.json({
-    orderedPlaylistIds: playlistVideoIds,
+    orderedVideoIds: playlistVideoIds,
     videoMap: playlistVideos
   });
 }

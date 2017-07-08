@@ -37,8 +37,11 @@ code .key {
   color: #e06b75;
 }
 code .string {
-  color: #1da1f2;
+  color: #4793d1;
 }
 code .boolean, code .null {
   color: #c677dd;
+}
+code .number {
+  color: #d18843;
 }
