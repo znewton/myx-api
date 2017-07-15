@@ -7,8 +7,17 @@ module.exports = function(app) {
   app.use(express.static(__dirname + '/'));
 
   app.use((req, res, next) => {
+    var origin = req.hostname;
+    var secure = req.secure ? 'https' : 'http';
+    var allowedOrigins = [
+      'localhost:3000',
+      'myxx.znewton.xyz']
+    var accessHeader = '';
+    if (allowedOrigins.indexOf(origin) > -1) {
+      accessHeader = secure + '://' + origin;
+    }
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000, http://myxx.znewton.xyz, https://myxx.znewton.xyz, http://www.myxx.znewton.xyz, https://www.myxx.znewton.xyz');
+    res.setHeader('Access-Control-Allow-Origin', accessHeader);
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
