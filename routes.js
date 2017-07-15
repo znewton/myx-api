@@ -8,7 +8,7 @@ module.exports = function(app) {
 
   app.use((req, res, next) => {
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000, http://myxx.znewton.xyz, https://myxx.znewton.xyz, http://www.myxx.znewton.xyz, https://www.myxx.znewton.xyz');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
