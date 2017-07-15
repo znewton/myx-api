@@ -126,6 +126,11 @@ exports.get_mix = async function (request, response) {
         });
         res.on('end', () => {
           const parsedData = JSON.parse(data);
+          if (!parsedData || !parsedData.items) {
+            console.log('Error when getting videos for ' + playlistId);
+            console.log('Received:', parsedData);
+            reject('Error retrieving videos for ' + playlistId);
+          }
           resolve(parsedData.items);
         });
       });
