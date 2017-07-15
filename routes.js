@@ -13,11 +13,12 @@ module.exports = function(app) {
       'localhost:3000',
       'myxx.znewton.xyz']
     var accessHeader = '';
+    console.log(origin);
     if (allowedOrigins.indexOf(origin) > -1) {
       accessHeader = secure + '://' + origin;
+      // Website you wish to allow to connect
+      res.setHeader('Access-Control-Allow-Origin', accessHeader);
     }
-    // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', accessHeader);
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
