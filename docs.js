@@ -106,6 +106,7 @@ function getMixDocs() {
       sjjkhfksjhfglsfsljdfj: {
         publishedAt: "yyyy-mm-ddThh:mm:ss.000Z",
         channelId: "suhffnsdlkjbnsljbsuhsi",
+        title: "Video Title",
         thumbnails: {
           default: {
             url: "https://i.ytimg.com/vi/urlof/default.jpg",
