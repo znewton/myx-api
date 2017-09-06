@@ -39,4 +39,7 @@ module.exports = function(app) {
 
   app.route('/mix')
     .get(controller.get_mix);
+
+  app.route('/playlistNames')
+    .get(controller.get_playlist_names);
 };
