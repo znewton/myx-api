@@ -10,7 +10,8 @@ module.exports = function(app) {
     var origin = req.headers.origin;
     var allowedOrigins = [
       'http://localhost:3000',
-      'http://myxx.znewton.xyz', 'https://myxx.znewton.xyz'
+      'http://myxx.znewton.xyz', 'https://myxx.znewton.xyz',
+      'http://myx.znewton.xyz', 'https://myx.znewton.xyz'
     ]
     console.log(origin);
     if (allowedOrigins.indexOf(origin) > -1) {
