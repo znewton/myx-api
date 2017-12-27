@@ -58,11 +58,12 @@ exports.get_channel_playlists = function (request, response) {
             return;
           }
           const uploads = {
+            kind: "youtube#playlist",
             id: channel.contentDetails.relatedPlaylists.uploads,
             snippet: {
+              channelId: channel.id,
               title: "Uploads",
               description: "",
-              channelId: channel.id,
               channelTitle: channel.snippet.title,
               localized: {
                 title: "Uploads",
