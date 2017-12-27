@@ -44,7 +44,6 @@ exports.get_channel_playlists = function (request, response) {
         return;
       }
       const channel = parsedChannelData.items[0];
-      console.log(channel);
       const playlistReq = https.request(options('playlist'), (playlistRes) => {
         let data = '';
         playlistRes.setEncoding('utf8');
