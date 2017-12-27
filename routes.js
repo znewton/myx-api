@@ -12,7 +12,7 @@ module.exports = function(app) {
       'http://localhost:3000',
       'http://myxx.znewton.xyz', 'https://myxx.znewton.xyz',
       'http://myx.znewton.xyz', 'https://myx.znewton.xyz'
-    ]
+    ];
     console.log(origin);
     if (allowedOrigins.indexOf(origin) > -1) {
       // Website you wish to allow to connect
@@ -26,12 +26,12 @@ module.exports = function(app) {
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
 
     next();
-  })
+  });
   // Routes
   app.route('/')
     .get((req, res) => {
       res.sendFile(path.resolve(__dirname, '/', 'index.html'))
-    })
+    });
   app.route('/channels')
     .get(controller.get_channels_by_search);
 
