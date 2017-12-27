@@ -32,6 +32,12 @@ module.exports = function(app) {
     .get((req, res) => {
       res.sendFile(path.resolve(__dirname, '/', 'index.html'))
     });
+
+  app.route('/ping')
+    .get((req, res) => {
+      res.json({message: ":D"});
+    });
+  
   app.route('/channels')
     .get(controller.get_channels_by_search);
 

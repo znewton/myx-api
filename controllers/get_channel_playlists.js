@@ -72,9 +72,8 @@ exports.get_channel_playlists = function (request, response) {
           };
           let playlists = parsedPLData.items;
           playlists.unshift(uploads);
-          response.json({
-            playlists: parsedPLData.items
-          });
+          response.json(parsedPLData.items);
+          console.log('Returned ' + parsedPLData.items.length + ' playlists');
         });
       });
       playlistReq.on('error', (e) => {
