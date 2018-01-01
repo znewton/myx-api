@@ -1,25 +1,7 @@
 const https = require('https');
 const querystring = require('query-string');
+const shuffle = require('../lib/utils').shuffle;
 const API_KEY = process.env.YOUTUBE_API_KEY;
-
-function _shuffle(array) {
-  var currentIndex = array.length, temporaryValue, randomIndex;
-
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
-
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-
-    // And swap it with the current element.
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-
-  return array;
-}
 
 /// Combines the given playlists into a mix.
 exports.get_mix = async function (request, response) {
@@ -76,7 +58,7 @@ exports.get_mix = async function (request, response) {
   }
   await Promise.all(playlistCalls);
   console.log('Responding');
-  playlistVideoIds = _shuffle(playlistVideoIds)
+  playlistVideoIds = shuffle(playlistVideoIds)
   response.json({
     orderedVideoIds: playlistVideoIds,
     videoMap: playlistVideos

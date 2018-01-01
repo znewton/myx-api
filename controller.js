@@ -18,6 +18,10 @@ exports.get_mix =
   require('./controllers/get_mix')
     .get_mix;
 
+exports.get_favorites_mix = 
+  require('./controllers/get_favorites_mix')
+    .get_favorites_mix;
+
 exports.get_playlist_names = 
   require('./controllers/get_playlist_names')
     .get_playlist_names;
